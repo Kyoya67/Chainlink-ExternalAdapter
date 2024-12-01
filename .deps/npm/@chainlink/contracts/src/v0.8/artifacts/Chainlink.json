@@ -1,0 +1,69 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f5ffdfea264697066735822122042d7f32c1ed45b9a6864bcd410cb26d0277243e5f69ec3e1ada9484b3cb5d43b64736f6c634300081c0033",
+			"opcodes": "PUSH1 0x55 PUSH1 0x4B PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x3F JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 TIMESTAMP 0xD7 RETURN 0x2C 0x1E 0xD4 JUMPDEST SWAP11 PUSH9 0x64BCD410CB26D02772 NUMBER 0xE5 0xF6 SWAP15 0xC3 0xE1 0xAD 0xA9 BASEFEE 0x4B EXTCODECOPY 0xB5 0xD4 EXTCODESIZE PUSH5 0x736F6C6343 STOP ADDMOD SHR STOP CALLER ",
+			"sourceMap": "293:3464:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "730000000000000000000000000000000000000000301460806040525f5ffdfea264697066735822122042d7f32c1ed45b9a6864bcd410cb26d0277243e5f69ec3e1ada9484b3cb5d43b64736f6c634300081c0033",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 TIMESTAMP 0xD7 RETURN 0x2C 0x1E 0xD4 JUMPDEST SWAP11 PUSH9 0x64BCD410CB26D02772 NUMBER 0xE5 0xF6 SWAP15 0xC3 0xE1 0xAD 0xA9 BASEFEE 0x4B EXTCODECOPY 0xB5 0xD4 EXTCODESIZE PUSH5 0x736F6C6343 STOP ADDMOD SHR STOP CALLER ",
+			"sourceMap": "293:3464:0:-:0;;;;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "17000",
+				"executionCost": "92",
+				"totalCost": "17092"
+			},
+			"internal": {
+				"_add(struct Chainlink.Request memory,string memory,string memory)": "infinite",
+				"_addBytes(struct Chainlink.Request memory,string memory,bytes memory)": "infinite",
+				"_addInt(struct Chainlink.Request memory,string memory,int256)": "infinite",
+				"_addStringArray(struct Chainlink.Request memory,string memory,string memory[] memory)": "infinite",
+				"_addUint(struct Chainlink.Request memory,string memory,uint256)": "infinite",
+				"_initialize(struct Chainlink.Request memory,bytes32,address,bytes4)": "infinite",
+				"_setBuffer(struct Chainlink.Request memory,bytes memory)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": []
+}

@@ -1,0 +1,355 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_oracle",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_link",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					}
+				],
+				"name": "ChainlinkCancelled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					}
+				],
+				"name": "ChainlinkFulfilled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					}
+				],
+				"name": "ChainlinkRequested",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "earthquakeInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "prefCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxScale",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quakeScore",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_requestId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "fulfill",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "requestEarthquakeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Earthquake.sol": "EarthquakeOracle"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.8/Chainlink.sol": {
+			"keccak256": "0x2df682bf5004b304fa9a578c0a4df29974aec44bd18ded16d04ea8f89b9fac88",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26608ae87993d14abfa3ca427c7cb5be73be73075e2b133a71143fa204566e9d",
+				"dweb:/ipfs/QmZgdd8nGyjBuyuPc1NrodZP13XmPz29FBvvfQKUprAZ3N"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/ChainlinkClient.sol": {
+			"keccak256": "0xa722cbe61d1e05d78ed23470c739634d5d3766ed6d34cb07c2c53d3932dd75ab",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b5e726f6c841f318c156ae69d82841e21271c8f4599dfaf52bda216811edf243",
+				"dweb:/ipfs/QmZhGXNfQRp2TueMaufdYPt9xB5XJavJx7CDeF1siMbfui"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/interfaces/ChainlinkRequestInterface.sol": {
+			"keccak256": "0xcb9cfd97e83ad76f0b9f38c31939faa40b9b49b17c8294efb7e01f0bc47641c5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://04a41f7aec071113910291bcafe211431546f2e2049ee52218d193f1d30b242d",
+				"dweb:/ipfs/QmNhJbhLqXfuZi2hpQhEKYnmqiGqDJ4RGCTY2S41ovYT2u"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/interfaces/ENSInterface.sol": {
+			"keccak256": "0xf7913635d15f748b9b328b5115279c32577cff9baba0f1642789fc55979fd7e5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ab832d89326415d9df81ae380cc1ff6ee1414fabb36fc70f70d9a4f238e04ba3",
+				"dweb:/ipfs/QmcfmZLyPnp5dbn1EPsprYrmmx3hGqqVPNx7jU6UijBvy7"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/interfaces/OperatorInterface.sol": {
+			"keccak256": "0x282943d0bd9bf79f31c90629c94c380d120ce0c2c428a0dd3d9751012fb52613",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d7c594cf9cfdb63151e566561b86347eee4099b581cb3296e7a13f13e1c789a",
+				"dweb:/ipfs/QmPXYqqHEf2fKSrL5G3ZtZEeBam21ETCxeFJBzXSeoDZnV"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/interfaces/OracleInterface.sol": {
+			"keccak256": "0xcbd2a3ae1098118beedcaedca5721ab9847c3a21e6482a71829e4ce8357b30b6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9d4a2109588d1b4c355e1622405f8760b0c164f2292a6cc2672c898472108989",
+				"dweb:/ipfs/QmbcfMMfQNaK5exe1bSkCRtJyiqjhLRVFK2itJfcWwsZsp"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/interfaces/PointerInterface.sol": {
+			"keccak256": "0x015785842b3c4902c97fbd091ed7c0cdf08126e64bd0a4bfe357edeb7e43a243",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d9a1d29c67533cf21b7b8b17eb67d6f692169367658abf2273b7168ac3646e63",
+				"dweb:/ipfs/QmdHhDgiacNWjvNi8eqErbunVXL2mR2Stcof2uvefvZ7qE"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol": {
+			"keccak256": "0xd3643595b0a46f577fff806736cbe4e3f81707c93fb1693a8a7960466e5cd321",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f7cccfc386f9cdb9037db66dd85a31347af8b733f39a18cbc12dbf1f5812d02d",
+				"dweb:/ipfs/QmcE3Hef9XLSbthiS3DKQFF1ZpYDZsPLHwW1DY5iUGAfcd"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol": {
+			"keccak256": "0x89388a631c16ad993e4d76d8d19e08ae98e1397f5dfdfb5f9c0b91015df4cf5d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://88cb96caa94128821daec5478c0f3646902007b81a0604b2e3ab79ea2f40b056",
+				"dweb:/ipfs/Qmd1nu9CpgouPmukNQpZThxKgPZAayXxqBfwbDVHfMrCrF"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol": {
+			"keccak256": "0x08bda450d4dc1d17147fd29810234d35e2c437f1a99be733cfa7ee516db08a48",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d47a793b314afe9cd82fcf05ffe4ebbfa5504c2decc83004edbb3b2069d4f0c3",
+				"dweb:/ipfs/Qmd2YLSiS8xeeXqireh6qJgTTwVY2VscZpv2cQBU8gkEJT"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/vendor/ENSResolver.sol": {
+			"keccak256": "0x606bda5f3fa27be4cf04f6636dda443b7787b56e87ade988fca2e51d2147613d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://63b50d13ca97c4dd62738398bb2e423a36563b827b0af94c0e7a47cf0d4a2e6b",
+				"dweb:/ipfs/QmXjy7BmtnPeCLMaMnGGnsxDPGxohfDpYzP8PnUoh6gBGa"
+			]
+		},
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6",
+				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
+				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
+			]
+		},
+		"contracts/Earthquake.sol": {
+			"keccak256": "0xcd0f578b7b9b51ac7ae921e554584959375909293eff591f034db2149879f826",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b257f70daa65d3764f2a7d3e4398fafcdf8f7bd69d9ade66ba316f16d1be6ba3",
+				"dweb:/ipfs/QmbDJE2zJXZqid6Tws4h9GH5fzp9YSP8eqiAgq6HC2icmX"
+			]
+		}
+	},
+	"version": 1
+}

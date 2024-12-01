@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getAuthorizedSenders",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "isAuthorizedSender",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "senders",
+						"type": "address[]"
+					}
+				],
+				"name": "setAuthorizedSenders",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/npm/@chainlink/contracts/src/v0.7/interfaces/AuthorizedReceiverInterface.sol": "AuthorizedReceiverInterface"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@chainlink/contracts/src/v0.7/interfaces/AuthorizedReceiverInterface.sol": {
+			"keccak256": "0x4276ccbc637409ab07d9baab0b72806aac938d5f180fe8bc186f64d5d376ba4e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://71a8ed40faa2f8fea03a8e55c6534c22bec374d134af2ea9a4a1f852b959b0c3",
+				"dweb:/ipfs/QmYc4WRpNBMr2aC2srcdyCdhGcCEPt1k7LRY8Z3YnDAbwM"
+			]
+		}
+	},
+	"version": 1
+}
